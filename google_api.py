@@ -28,4 +28,4 @@ def api(time):
         },
     }
     # 用意した予定を登録する
-    event = service.events().insert(calendarId=calendar_id, body=body).execute()
+    service.events().insert(calendarId=calendar_id, body=body).execute()

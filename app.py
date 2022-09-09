@@ -19,8 +19,11 @@ def time_catch(diff):
                 I = i-1
                 break
 
+    #生のデータ
     tmp = elems[I].contents[0].contents[0]
+    #ハイフンをなくして配列に
     time_data_str  = re.split('[-: ]',tmp)
+    #不要なデータを排除
     time_data_str.pop(5)
     time_data_int = [int(s) for s in  time_data_str]
     return  time_data_int
